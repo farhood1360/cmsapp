@@ -1,0 +1,12 @@
+<h1>CMS App</h1>
+<p>This is a cms application.</p>
+
+
+<%= link_to("About Us", {:controlller => 'demo', :action => 'about' })  %> <br><br>
+
+<%= link_to("Contact Us", {:controlller => 'demo', :action => 'contact', :page  => 5, :id =>20})  %> <br>
+
+ID: <%= params[:id] %> <br>
+ID: <%= @id %> <br>
+Page: <%= @page + 1 %> <br>
+

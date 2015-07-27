@@ -1,0 +1,24 @@
+== README
+
+
+* Ruby version: 1.9.3
+
+* Gem version: 2.4.8
+
+* Rails version: 4.1.8
+
+* System dependencies: test, jquery, ember.js, css
+
+* Configuration: module Cmsapp
+
+* Database : Sqlite3
+
+* Services: job queues, cache servers, search engines
+
+* Deployment instructions:  
+
+ $ rails s
+
+ run @ http://localhost:4000
+
+
