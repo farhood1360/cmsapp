@@ -1,0 +1,56 @@
+<div class="container">
+
+	<%= image_tag("logo.png", :alt => "logo", :size => "300*100", :class => "img-thumbnail") %><br>
+
+	<h1>Contact Us</h1>
+
+	<div id="content" class="col-xs-9">
+
+		<p>Feel free to contact us.</p>
+
+		<br />
+
+		<div class="jumbotron">
+
+			<% @phone = "(224) 600-4080"  %>
+
+			<%= "Phone: #{@phone}"  %><br><br>
+
+			<address>
+			  <strong>Farhood Studio, Inc.</strong><br>
+			  1440 Vista Walk, Apt #D<br>
+			  Hoffman Esates, IL 60169<br>
+			  <abbr title="Phone">P:</abbr> (123) 456-7890
+			</address>
+
+		</div>
+
+		<%= form_tag("/search", method: "get") do %>
+			<%= label_tag(:q, "Search for:") %><br><br>
+			<%= text_field_tag(:q, "Type Here!", class: "navbar-form navbar-left" ) %><br><br>
+			<%= submit_tag("Search", class: "btn btn-primary") %><br><br>
+			<%= label_tag(:q, "First Name:") %><br><br>
+			<%= text_field_tag(:q, "First Name") %><br><br>
+			<%= label_tag(:q, "Last Name:") %><br><br>
+			<%= text_field_tag(:q, "last Name") %><br><br>
+			<%= label_tag(:q, "Password:") %><br><br>
+			<%= password_field_tag(:password) %><br><br>
+			<%= label_tag(:q, "Phone Number:") %><br><br>
+			<%= telephone_field(:user, :phone) %><br><br>
+			<%= label_tag(:q, "Email Address:") %><br><br>
+			<%= email_field(:user, :address) %><br><br>
+			<%= label_tag(:q, "Comment:") %><br><br>
+			<%= text_area_tag(:message, "Comment Here!", size: "24x6") %><br><br>
+			<%= submit_tag("Submit", class: "btn btn-default btn-lg") %>
+		<% end %>
+
+		<ul class="pager">
+		  <li><%= link_to("Home", {:controlller => 'demo', :action => 'index' }, class: 'active')  %></li>
+		  <li><%= link_to("About Us", {:controlller => 'demo', :action => 'about'})  %></li>
+		</ul>
+
+	</div>
+</div>
+
+
+

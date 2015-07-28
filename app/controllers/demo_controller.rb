@@ -1,20 +1,17 @@
 class DemoController < ApplicationController
   
-  layout false 
+  layout "bootstrap" 
 
   def index
-  	# render('demo/about')
-  	@id =  params['id'].to_i
-  	@page = params[:page].to_i
+	render('demo/index')
   end
 
   def about
-  	# render('demo/index')
-  	# @array = [1,2,3,4,5]
+  	render('demo/about')
   end
 
   def contact
-  	redirect_to(:controller => 'demo', :action => 'about')
+  	render('demo/contact')
   end
 
   def studio

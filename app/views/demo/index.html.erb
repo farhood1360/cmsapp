@@ -1,12 +1,55 @@
-<h1>CMS App</h1>
-<p>This is a cms application.</p>
+<div class="container">
 
+	<%= image_tag("logo.png", :alt => "logo", :size => "300*100") %><br>
 
-<%= link_to("About Us", {:controlller => 'demo', :action => 'about' })  %> <br><br>
+	<h1 class="text-capitalize">cms app</h1>
 
-<%= link_to("Contact Us", {:controlller => 'demo', :action => 'contact', :page  => 5, :id =>20})  %> <br>
+	<br><br>
 
-ID: <%= params[:id] %> <br>
-ID: <%= @id %> <br>
-Page: <%= @page + 1 %> <br>
+	<div class="btn-group">
+		<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span>Star</button>
+		<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span>Star</button>
+		<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span>Star</button>
+		<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span>Star</button>
+		<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span>Star</button>
+	</div>
+
+	<br><br>
+
+	<div class="row">
+
+		<div id="sidebar" class="col-xs-4">
+
+		<ul class="nav nav-pills nav-stacked">
+
+			<li><%= link_to("Home", {:controlller => 'demo', :action => 'index' }, class: 'active')  %> </li>
+
+			<li><%= link_to("About Us", {:controlller => 'demo', :action => 'about' })  %> </li>
+
+			<li><%= link_to("Contact Us", {:controlller => 'demo', :action => 'contact'})  %> </li>
+
+			<li><%= link_to("Farhood Studio", {:controlller => 'demo', :action => 'studio'})  %> </li>
+
+			<li><%= link_to("Zoroastrian News Agancy", {:controlller => 'demo', :action => 'zna'})  %> </li>
+
+			<li><%= link_to("Persian Store", {:controlller => 'demo', :action => 'store'})  %> </li>
+
+		</ul>
+
+		</div>
+
+		<div id="content" class="col-xs-8">
+
+			<div class="jumbotron">
+
+					<p class="lead" class="text-right">This is a <mark>cms application.</mark>.....<del>blog application!!!</del></p> 
+
+			</div>
+
+		 </div>
+
+	</div>
+
+</div>
+
 

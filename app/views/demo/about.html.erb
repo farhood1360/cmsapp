@@ -1,8 +1,33 @@
-<h1>About Us</h1>
-<p>This is a cms application for .</p>
+<div class="container">
 
-<br />
+	<%= image_tag("logo.png", :alt => "logo", :size => "300*100") %><br>
 
-<% target = "World"  %>
-<%= "Hello #{target}"  %>
+	<h1>About Us</h1>
+
+	<div class="progress">
+	  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+	    60%
+	  </div>
+	</div>
+
+	<div id="content" class="col-xs-9">
+
+		<h2>About <abbr title="Farhood Studio" class="initialism">Company:</abbr></h2>
+
+		<br />
+
+		<div class="jumbotron">
+
+			<% @company = "farhood studio"  %>
+			<%= "Welcome to: #{@company}"  %>
+
+		</div>
+
+		<ul class="pager">
+		  <li><%= link_to("Home", {:controlller => 'demo', :action => 'index' }, class: 'active')  %></li>
+		  <li><%= link_to("Contact Us", {:controlller => 'demo', :action => 'contact'})  %></li>
+		</ul>
+	</div>
+</div>
+
 
